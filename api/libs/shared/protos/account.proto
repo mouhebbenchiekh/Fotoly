@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package account;
+
+service AccountService {
+  rpc CreateAccount(CreateAccountRequest) returns (CreateAccountResponse);
+  rpc GetAccount(GetAccountRequest) returns (GetAccountResponse);
+  // Add more methods as needed
+}
+
+message CreateAccountRequest {
+  string username = 1;
+  string email = 2;
+  // Add more fields as needed
+}
+
+message CreateAccountResponse {
+  string accountId = 1;
+}
+
+message GetAccountRequest {
+  string accountId = 1;
+}
+
+message GetAccountResponse {
+  string username = 1;
+  string email = 2;
+  // Add more fields as needed
+}

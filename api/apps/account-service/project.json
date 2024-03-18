@@ -1,0 +1,24 @@
+{
+  "name": "account-service",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/account-service/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "account-service:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "account-service:build:development"
+        },
+        "production": {
+          "buildTarget": "account-service:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
