@@ -5,6 +5,8 @@
   "scripts": {},
   "private": true,
   "dependencies": {
+    "@bufbuild/buf": "^1.30.0",
+    "@bufbuild/protobuf": "^1.8.0",
     "@bufbuild/protoc-gen-es": "^1.8.0",
     "@connectrpc/protoc-gen-connect-es": "^1.4.0",
     "@nestjs/common": "^10.0.2",

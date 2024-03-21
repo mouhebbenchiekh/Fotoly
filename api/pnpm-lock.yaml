@@ -5,9 +5,15 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@bufbuild/protoc-gen-es':
+  '@bufbuild/buf':
+    specifier: ^1.30.0
+    version: 1.30.0
+  '@bufbuild/protobuf':
     specifier: ^1.8.0
     version: 1.8.0
+  '@bufbuild/protoc-gen-es':
+    specifier: ^1.8.0
+    version: 1.8.0(@bufbuild/protobuf@1.8.0)
   '@connectrpc/protoc-gen-connect-es':
     specifier: ^1.4.0
     version: 1.4.0(@bufbuild/protoc-gen-es@1.8.0)
@@ -1479,11 +1485,79 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
 
+  /@bufbuild/buf-darwin-arm64@1.30.0:
+    resolution: {integrity: sha512-EUhh/hiazZPyf6I0HcQHf/ODZAq2js+PdIbemEWm8WQV29rqhY/stRxKDF755gG5xNr4xwhraQXYTizG3MZV5A==}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@bufbuild/buf-darwin-x64@1.30.0:
+    resolution: {integrity: sha512-ID9G93hlpvy3KwYqu1UFZCFHaQ7KDESH3OmL33ASpdCojtQbD7EtKCQe8vwIW2raim7lSocSHLyZuLCUAvWoUw==}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@bufbuild/buf-linux-aarch64@1.30.0:
+    resolution: {integrity: sha512-VTp5YnfsHtCmRNqGAgzSm18fCTVw8ErK0Lk506CWtqqGhPJ+lWuVkxgAAzG+qoK4LZXIpX9dXxkoqdb+L1NTkg==}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@bufbuild/buf-linux-x64@1.30.0:
+    resolution: {integrity: sha512-XBasj1Baf/lJIiJbX40RDjM8OLS3eVIiilnDqQ7ZL3WOCn6gROYr9lLjlUg9GYox9On5LCFp3536zfr3hNqQwg==}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@bufbuild/buf-win32-arm64@1.30.0:
+    resolution: {integrity: sha512-1C18Abq2GpBeGP54VOr9ABzSobynH/q8pUkbY6ftp7JIYdrCvKfJmianEpvTHJWl5kwe3UP9xYYgr5Yt+Y/8Yw==}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@bufbuild/buf-win32-x64@1.30.0:
+    resolution: {integrity: sha512-uRc05jpbvdUxKSHpUj6RfNR3yJTIdSYccgtupgc6qPoDXE+KveyqjbA0CqIqXhgJmgyggBcYLEbX+tdtz5LRhA==}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@bufbuild/buf@1.30.0:
+    resolution: {integrity: sha512-SImlJJA+9uDccWzt6SFXJwRQE/6fGv2cIKyXqDJCWthYMMYw9/QOdM/pXg5JZx1XJrHiEvzZ0y+ump7Q08/FPw==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    optionalDependencies:
+      '@bufbuild/buf-darwin-arm64': 1.30.0
+      '@bufbuild/buf-darwin-x64': 1.30.0
+      '@bufbuild/buf-linux-aarch64': 1.30.0
+      '@bufbuild/buf-linux-x64': 1.30.0
+      '@bufbuild/buf-win32-arm64': 1.30.0
+      '@bufbuild/buf-win32-x64': 1.30.0
+    dev: false
+
   /@bufbuild/protobuf@1.8.0:
     resolution: {integrity: sha512-qR9FwI8QKIveDnUYutvfzbC21UZJJryYrLuZGjeZ/VGz+vXelUkK+xgkOHsvPEdYEdxtgUUq4313N8QtOehJ1Q==}
     dev: false
 
-  /@bufbuild/protoc-gen-es@1.8.0:
+  /@bufbuild/protoc-gen-es@1.8.0(@bufbuild/protobuf@1.8.0):
     resolution: {integrity: sha512-jnvBKwHq3o/iOgfKxaxn5Za7ay4oAs8KWgoHiDc9Fsb0g+/d1z+mHlHvmevOiCPcVZsnH6V3LImOJvGStPONpA==}
     engines: {node: '>=14'}
     hasBin: true
@@ -1493,6 +1567,7 @@ packages:
       '@bufbuild/protobuf':
         optional: true
     dependencies:
+      '@bufbuild/protobuf': 1.8.0
       '@bufbuild/protoplugin': 1.8.0
     transitivePeerDependencies:
       - supports-color
@@ -1522,7 +1597,7 @@ packages:
         optional: true
     dependencies:
       '@bufbuild/protobuf': 1.8.0
-      '@bufbuild/protoc-gen-es': 1.8.0
+      '@bufbuild/protoc-gen-es': 1.8.0(@bufbuild/protobuf@1.8.0)
       '@bufbuild/protoplugin': 1.8.0
     transitivePeerDependencies:
       - supports-color
