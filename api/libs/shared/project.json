@@ -12,7 +12,11 @@
         "tsConfig": "libs/shared/tsconfig.lib.json",
         "packageJson": "libs/shared/package.json",
         "main": "libs/shared/src/index.ts",
-        "assets": ["libs/shared/*.md", "libs/shared/protos/*.proto"]
+        "assets": [
+          "libs/shared/*.md",
+          "libs/shared/protos/*.proto",
+          "libs/shared/protos/*.ts"
+        ]
       }
     }
   },

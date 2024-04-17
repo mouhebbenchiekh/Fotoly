@@ -13,7 +13,7 @@ import { join } from 'path';
         transport: Transport.GRPC,
         options: {
           package: 'account',
-          protoPath: 'libs/shared/protos/account.proto',
+          protoPath: './dist/libs/shared/protos/account.proto',
         },
       },
     ]),

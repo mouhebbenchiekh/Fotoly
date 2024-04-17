@@ -15,7 +15,7 @@ const MicroserviceInit = async (
 
       options: {
         package: packageName,
-        protoPath: join(__dirname, `../protos/${path}`),
+        protoPath: join(`libs/shared/protos/${path}`),
         url: `localhost:${port}`,
       },
     }

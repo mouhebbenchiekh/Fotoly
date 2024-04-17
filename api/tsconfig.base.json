@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@api/shared": ["libs/shared/src/index.ts"],
-      "@api/gen": ["gen/libs/shared/protos"]
+      "@api/gen": ["gen/libs/shared/protos"],
+      "@api/shared": ["libs/shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
