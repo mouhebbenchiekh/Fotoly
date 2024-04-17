@@ -14,6 +14,8 @@ comes with a LSP for Vim users.
 
 Run `npx nx serve api` to start the development server. Happy coding!
 
+Run `protoc --plugin=protoc-gen-ts_proto=.\\node_modules\\.bin\\protoc-gen-ts_proto.cmd --ts_proto_out=./gen ./libs/shared/protos/account.proto --ts_proto_opt=nestJs=true` to generate ts proto files
+
 ## Build for production
 
 Run `npx nx build api` to build the application. The build artifacts are stored in the output directory (e.g. `dist/` or `build/`), ready to be deployed.

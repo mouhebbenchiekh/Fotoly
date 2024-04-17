@@ -5,17 +5,18 @@
   "scripts": {},
   "private": true,
   "dependencies": {
-    "@bufbuild/buf": "^1.30.0",
-    "@bufbuild/protobuf": "^1.8.0",
-    "@bufbuild/protoc-gen-es": "^1.8.0",
-    "@connectrpc/protoc-gen-connect-es": "^1.4.0",
+    "@grpc/grpc-js": "^1.10.6",
+    "@grpc/proto-loader": "^0.7.12",
     "@nestjs/common": "^10.0.2",
     "@nestjs/core": "^10.0.2",
     "@nestjs/microservices": "^10.3.4",
     "@nestjs/platform-express": "^10.0.2",
+    "@types/long": "^5.0.0",
     "axios": "^1.6.0",
+    "long": "^5.2.3",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0",
+    "ts-proto": "^1.171.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {

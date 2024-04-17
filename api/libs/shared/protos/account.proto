@@ -15,11 +15,11 @@ message CreateAccountRequest {
 }
 
 message CreateAccountResponse {
-  string accountId = 1;
+  int64 accountId = 1;
 }
 
 message GetAccountRequest {
-  string accountId = 1;
+  int64 accountId = 1;
 }
 
 message GetAccountResponse {
