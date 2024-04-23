@@ -6,12 +6,14 @@ export const protobufPackage = "account";
 
 export interface CreateAccountRequest {
   username: string;
-  /** Add more fields as needed */
   email: string;
+  /** Add more fields as needed */
+  password: string;
 }
 
 export interface CreateAccountResponse {
-  accountId: number;
+  username: string;
+  email: string;
 }
 
 export interface GetAccountRequest {

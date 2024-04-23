@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@api/gen": ["gen/libs/shared/protos"],
-      "@api/shared": ["libs/shared/src/index.ts"]
+      "@api/shared": ["libs/shared/src"]
     }
   },
   "exclude": ["node_modules", "tmp"]

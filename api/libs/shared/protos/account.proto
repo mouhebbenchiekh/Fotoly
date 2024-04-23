@@ -11,11 +11,14 @@ service AccountService {
 message CreateAccountRequest {
   string username = 1;
   string email = 2;
+  string password =3;
   // Add more fields as needed
 }
 
 message CreateAccountResponse {
-  int64 accountId = 1;
+  string username = 1;
+  string email = 2;
+
 }
 
 message GetAccountRequest {
